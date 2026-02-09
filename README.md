@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DroneInspectMK Website
 
-## Getting Started
+Професионална веб-страна за DroneInspectMK - дрон услуги и обука во Македонија.
 
-First, run the development server:
+## 🚀 Технологии
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Font:** [Inter](https://fonts.google.com/specimen/Inter) (со поддршка за кирилица)
+
+## 📁 Структура на Проектот
+
+```
+droneinspect/
+├── docs/                      # Документација
+│   ├── website-content.md     # Содржина од оригинална веб-страна
+│   └── project-plan.md        # План за развој
+├── src/
+│   ├── app/                   # Next.js App Router
+│   │   ├── layout.tsx         # Root layout со Header/Footer
+│   │   ├── page.tsx           # Почетна страна
+│   │   └── globals.css        # Глобални стилови
+│   ├── components/
+│   │   ├── layout/            # Layout компоненти
+│   │   │   ├── Header.tsx     # Навигација
+│   │   │   └── Footer.tsx     # Footer
+│   │   ├── sections/          # Секции на страната
+│   │   │   ├── Hero.tsx       # Hero секција
+│   │   │   ├── Services.tsx   # Услуги
+│   │   │   └── ContactForm.tsx # Контакт форма
+│   │   └── ui/                # shadcn/ui компоненти
+│   └── lib/                   # Utility функции
+└── public/                    # Статични фајлови
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Инсталација и Развој
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18.17 или понова верзија
+- npm, yarn, pnpm или bun
 
-## Learn More
+### Setup
 
-To learn more about Next.js, take a look at the following resources:
+1. **Инсталирајте зависности:**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Стартувајте development server:**
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Отворете го браузерот:**
+   ```
+   http://localhost:3000
+   ```
 
-## Deploy on Vercel
+## 📝 Скрипти
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run dev          # Стартува development server
+npm run build        # Прави production build
+npm run start        # Стартува production server
+npm run lint         # Проверува код со ESLint
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Дизајн Систем
+
+### Бои
+
+- **Primary:** Сина (Blue) - за главни акценти
+- **Secondary:** Сива - за секундарни елементи
+- **Background:** Бела/Светло сива
+- **Text:** Темно сива/Црна
+
+### Компоненти
+
+Сите UI компоненти се базирани на shadcn/ui и можат да се најдат во `src/components/ui/`.
+
+Достапни компоненти:
+- Button, Card, Badge
+- Navigation Menu, Sheet, Dialog
+- Input, Textarea, Label, Form, Select
+- Avatar, Separator
+
+## 📄 Страници
+
+### Тековни страници:
+
+- ✅ **Почетна** (`/`) - Hero, Services, Contact форма
+
+### Планирани страници:
+
+- 🔲 **Услуги** (`/uslugi`) - 6 подстрани
+- 🔲 **Обука** (`/obuka`)
+- 🔲 **Опрема** (`/oprema`)
+- 🔲 **Галерија** (`/galerija`)
+- 🔲 **За нас** (`/za-nas`)
+- 🔲 **Контакт** (`/kontakt`)
+
+## 🌐 SEO
+
+Веб-страната е оптимизирана за Македонскиот пазар со:
+- Македонски јазик (кирилица)
+- Meta tags за SEO
+- Semantic HTML
+- Responsive images
+- Performance optimization
+
+## 📱 Респонзивност
+
+Дизајнот е респонзивен и оптимизиран за:
+- 📱 Mobile (320px - 768px)
+- 💻 Tablet (768px - 1024px)
+- 🖥️ Desktop (1024px+)
+
+## 📞 Контакт Информации
+
+- **Телефон:** +389 70 265 226
+- **Email:** droneinspectmk@gmail.com
+- **Компанија:** DroneInspectМК
+
+## 📄 Лиценца
+
+© 2026 DroneInspectMK. Сите права задржани.
+
