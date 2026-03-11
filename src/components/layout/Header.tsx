@@ -102,24 +102,34 @@ export function Header() {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]" style={{ background: 'rgba(10, 10, 10, 0.98)', borderLeft: '1px solid rgba(0,200,255,0.15)' }}>
-            <nav className="flex flex-col space-y-4 mt-8">
+          <SheetContent side="right" className="w-[300px] sm:w-[400px] overflow-y-auto" style={{ background: 'rgba(10, 10, 10, 0.98)', borderLeft: '1px solid rgba(0,200,255,0.15)' }}>
+            {/* Mobile Logo */}
+            <div className="flex items-center justify-center pt-4 pb-6 border-b border-white/10">
+              <img 
+                src="/logo/DroneInspect Logo White.svg" 
+                alt="DroneInspect MK" 
+                className="h-10 w-auto"
+                style={{ filter: 'drop-shadow(0 0 20px rgba(0,200,255,0.3))' }}
+              />
+            </div>
+
+            <nav className="flex flex-col space-y-2 mt-6 px-2">
               <Link
                 href="/"
-                className="text-lg font-medium text-white/70 hover:text-[#00c8ff] transition-colors"
+                className="text-lg font-medium text-white/70 hover:text-[#00c8ff] transition-colors py-3 px-4 rounded-lg hover:bg-white/5"
                 onClick={() => setIsOpen(false)}
               >
                 Почетна
               </Link>
 
-              <div className="space-y-2">
-                <p className="text-lg font-medium text-white/90">Услуги</p>
-                <div className="pl-4 space-y-2">
+              <div className="space-y-2 py-2">
+                <p className="text-lg font-medium text-white/90 px-4 py-2">Услуги</p>
+                <div className="pl-2 space-y-1">
                   {services.map((service) => (
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="block text-sm text-white/50 hover:text-[#00c8ff] transition-colors"
+                      className="block text-sm text-white/50 hover:text-[#00c8ff] transition-colors py-2.5 px-4 rounded-lg hover:bg-white/5"
                       onClick={() => setIsOpen(false)}
                     >
                       {service.title}
@@ -130,7 +140,7 @@ export function Header() {
 
               <Link
                 href="/obuka"
-                className="text-lg font-medium text-white/70 hover:text-[#00c8ff] transition-colors"
+                className="text-lg font-medium text-white/70 hover:text-[#00c8ff] transition-colors py-3 px-4 rounded-lg hover:bg-white/5"
                 onClick={() => setIsOpen(false)}
               >
                 Обука
@@ -138,7 +148,7 @@ export function Header() {
 
               <Link
                 href="/oprema"
-                className="text-lg font-medium text-white/70 hover:text-[#00c8ff] transition-colors"
+                className="text-lg font-medium text-white/70 hover:text-[#00c8ff] transition-colors py-3 px-4 rounded-lg hover:bg-white/5"
                 onClick={() => setIsOpen(false)}
               >
                 Опрема
@@ -146,7 +156,7 @@ export function Header() {
 
               <Link
                 href="/galerija"
-                className="text-lg font-medium text-white/70 hover:text-[#00c8ff] transition-colors"
+                className="text-lg font-medium text-white/70 hover:text-[#00c8ff] transition-colors py-3 px-4 rounded-lg hover:bg-white/5"
                 onClick={() => setIsOpen(false)}
               >
                 Галерија
@@ -154,23 +164,25 @@ export function Header() {
 
               <Link
                 href="/za-nas"
-                className="text-lg font-medium text-white/70 hover:text-[#00c8ff] transition-colors"
+                className="text-lg font-medium text-white/70 hover:text-[#00c8ff] transition-colors py-3 px-4 rounded-lg hover:bg-white/5"
                 onClick={() => setIsOpen(false)}
               >
                 За нас
               </Link>
 
-              <Link href="/kontakt" onClick={() => setIsOpen(false)}>
-                <Button className="w-full bg-[#00c8ff] hover:bg-[#00a8dd] text-black font-bold">Закажи термин</Button>
-              </Link>
+              <div className="pt-4 pb-2">
+                <Link href="/kontakt" onClick={() => setIsOpen(false)}>
+                  <Button className="w-full bg-[#00c8ff] hover:bg-[#00a8dd] text-black font-bold py-6 text-base">Закажи термин</Button>
+                </Link>
+              </div>
 
-              <div className="pt-4 space-y-2 border-t border-white/10">
-                <a href="tel:+38970265226" className="flex items-center space-x-2 text-sm text-white/50 hover:text-[#00c8ff] transition-colors">
-                  <Phone className="h-4 w-4" />
+              <div className="pt-4 pb-6 space-y-3 border-t border-white/10">
+                <a href="tel:+38970265226" className="flex items-center space-x-3 text-sm text-white/50 hover:text-[#00c8ff] transition-colors py-2.5 px-4 rounded-lg hover:bg-white/5">
+                  <Phone className="h-5 w-5" />
                   <span>+389 70 265 226</span>
                 </a>
-                <a href="mailto:droneinspectmk@gmail.com" className="flex items-center space-x-2 text-sm text-white/50 hover:text-[#00c8ff] transition-colors">
-                  <Mail className="h-4 w-4" />
+                <a href="mailto:droneinspectmk@gmail.com" className="flex items-center space-x-3 text-sm text-white/50 hover:text-[#00c8ff] transition-colors py-2.5 px-4 rounded-lg hover:bg-white/5">
+                  <Mail className="h-5 w-5" />
                   <span>droneinspectmk@gmail.com</span>
                 </a>
               </div>
