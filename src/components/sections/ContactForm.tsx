@@ -10,15 +10,32 @@ import { Phone, Mail, MapPin, Send, Calendar } from 'lucide-react';
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    const formData = new FormData(e.currentTarget);
     
-    setIsSubmitting(false);
-    alert('Вашата порака е успешно испратена! Ќе ве контактираме наскоро.');
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        e.currentTarget.reset();
+        alert('Вашата порака е успешно испратена! Ќе ве контактираме наскоро.');
+      } else {
+        alert('Настана грешка. Ве молиме обидете се повторно.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Настана грешка. Ве молиме обидете се повторно.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -99,11 +116,16 @@ export function ContactForm() {
               Пополнете ја формата и ќе ве контактираме најбрзо можно
             </p>
             <form onSubmit={handleSubmit} className="space-y-5">
+              <input type="hidden" name="access_key" value="c2788627-87af-4a87-a901-f6983aa49419" />
+              <input type="hidden" name="subject" value="Нова порака од DroneInspect контакт форма" />
+              <input type="hidden" name="from_name" value="DroneInspect Website" />
+              
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="firstName" className="text-white/60 text-xs uppercase tracking-wider">Име *</Label>
                   <Input 
-                    id="firstName" 
+                    id="firstName"
+                    name="firstName"
                     placeholder="Вашето име" 
                     required 
                     className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-[#00c8ff]/50 focus:bg-white/8"
@@ -112,7 +134,8 @@ export function ContactForm() {
                 <div className="space-y-2">
                   <Label htmlFor="lastName" className="text-white/60 text-xs uppercase tracking-wider">Презиме *</Label>
                   <Input 
-                    id="lastName" 
+                    id="lastName"
+                    name="lastName"
                     placeholder="Вашето презиме" 
                     required 
                     className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-[#00c8ff]/50"
@@ -123,7 +146,8 @@ export function ContactForm() {
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-white/60 text-xs uppercase tracking-wider">Email *</Label>
                 <Input 
-                  id="email" 
+                  id="email"
+                  name="email"
                   type="email" 
                   placeholder="vashemail@example.com" 
                   required 
@@ -134,7 +158,8 @@ export function ContactForm() {
               <div className="space-y-2">
                 <Label htmlFor="phone" className="text-white/60 text-xs uppercase tracking-wider">Телефон</Label>
                 <Input 
-                  id="phone" 
+                  id="phone"
+                  name="phone"
                   type="tel" 
                   placeholder="+389 XX XXX XXX" 
                   className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-[#00c8ff]/50"
@@ -144,7 +169,8 @@ export function ContactForm() {
               <div className="space-y-2">
                 <Label htmlFor="service" className="text-white/60 text-xs uppercase tracking-wider">Услуга</Label>
                 <Input 
-                  id="service" 
+                  id="service"
+                  name="service"
                   placeholder="Која услуга ве интересира?" 
                   className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-[#00c8ff]/50"
                 />
@@ -153,7 +179,8 @@ export function ContactForm() {
               <div className="space-y-2">
                 <Label htmlFor="message" className="text-white/60 text-xs uppercase tracking-wider">Порака *</Label>
                 <Textarea 
-                  id="message" 
+                  id="message"
+                  name="message"
                   placeholder="Опишете ја вашата потреба..." 
                   rows={4}
                   required 
