@@ -36,7 +36,7 @@ const services = [
     href: "/uslugi/termalno-snimanje",
     badge: "Термовизија",
     image:
-      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
     accent: "#ff6b35",
   },
   {
