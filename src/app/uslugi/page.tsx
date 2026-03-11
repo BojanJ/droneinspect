@@ -1,13 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   Sun,
@@ -16,6 +9,10 @@ import {
   Zap,
   Search,
   Music,
+  Home,
+  Thermometer,
+  BarChart3,
+  Film,
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
@@ -29,63 +26,123 @@ export const metadata: Metadata = {
 const services = [
   {
     id: 1,
-    title: "Контрола на соларни панели",
+    title: "Инспекција на кровни конструкции",
     description:
-      "Ефикасна контрола и инспекција на соларни панели со термовизиска технологија за откривање на дефекти и оптимизација на перформансите.",
-    icon: Sun,
-    href: "/uslugi/solarni-paneli",
-    badge: "Обновлива енергија",
-    features: ["Термовизиска инспекција", "Брзо покривање", "Детални извештаи"],
+      "Детална аерофотографска инспекција на кровни покривачи, изолации и конструкции без потреба од скела или специјална опрема. Откривање на пукнатини, оштетувања и протекувања со висока прецизност — побезбедно, побрзо и поефтино.",
+    icon: Home,
+    href: "/uslugi/krovni-konstrukcii",
+    badge: "Инспекција",
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    accent: "#00c8ff",
   },
   {
     id: 2,
-    title: "Контрола на ветерници",
+    title: "Термално снимање и енергетска ефикасност",
     description:
-      "Точни инспекции на ветерници за подобро управување со ресурсите. Брзо и ефикасно набљудување на нивната состојба.",
-    icon: Wind,
-    href: "/uslugi/veternici",
-    badge: "Обновлива енергија",
-    features: ["Безбедна инспекција", "360° преглед", "Превентивно одржување"],
+      "Со термовизиска камера лоцираме топлотни загуби, влажни зони и скриени дефекти во градби и индустриски постројки. Прецизни термални мапи за оптимизација на енергетски перформанси и намалување на трошоци.",
+    icon: Thermometer,
+    href: "/uslugi/termalno-snimanje",
+    badge: "Термовизија",
+    image:
+      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80",
+    accent: "#ff6b35",
   },
   {
     id: 3,
-    title: "Изградба на високи објекти",
+    title: "Снимање на градежни парцели и прогрес",
     description:
-      "Важни аерофотографии и видео материјали за олеснување на процесот на инспекција и управување со градежните проекти.",
-    icon: Building2,
-    href: "/uslugi/gradezni-objekti",
-    badge: "Градежништво",
-    features: ["Прогрес мониторинг", "3D мапирање", "Маркетинг материјали"],
+      "Редовно аерофотографско и видео документирање на напредокот на градежните проекти. Создаваме прегледни временски линии, 3D модели на локации и точни волуметриски мерења за подобро управување со проектот.",
+    icon: BarChart3,
+    href: "/uslugi/gradezni-parceli",
+    badge: "Мониторинг",
+    image:
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80",
+    accent: "#00ff88",
   },
   {
     id: 4,
-    title: "Инспекција на далеководи",
+    title: "Професионално видео за недвижности",
     description:
-      "Практичен и ефикасен начин за проверка на состојбата и безбедноста на далеководи без потреба од скапи хеликоптери.",
-    icon: Zap,
-    href: "/uslugi/dalevodi",
-    badge: "Инфраструктура",
-    features: ["Термовизиска контрола", "Недостапни терени", "GPS маркирање"],
+      "Кинематографски аерофотографии и видео за луксузни недвижности, хотели и комерцијални простори. Драматични воздушни снимки кои ја зголемуваат продажната вредност и привлекуваат поголем интерес на потенцијалните купувачи.",
+    icon: Film,
+    href: "/uslugi/nedvizhnosti",
+    badge: "Недвижности",
+    image:
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    accent: "#c084fc",
   },
   {
     id: 5,
-    title: "Пребарување и локација на терен",
+    title: "Контрола на соларни панели",
     description:
-      "Брз и ефикасен начин за скенирање големи и тешкодостапни области со детално снимање и анализа на теренот.",
-    icon: Search,
-    href: "/uslugi/prebaruvanje-teren",
-    badge: "Спасување",
-    features: ["Термална камера", "Live координација", "Брзо покривање"],
+      "Ефикасна термовизиска инспекција на соларни фарми и индивидуални инсталации. Брзо откривање на дефектни ќелии, затемнувања и електрични проблеми со минимален прекин на производство.",
+    icon: Sun,
+    href: "/uslugi/solarni-paneli",
+    badge: "Обновлива енергија",
+    image:
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
+    accent: "#fbbf24",
   },
   {
     id: 6,
+    title: "Контрола на ветерници",
+    description:
+      "Прецизна инспекција на перки, куќишта и торњови на ветерници без застој во производство. Откривање на пукнатини и абење на компоненти во рана фаза за превентивно одржување.",
+    icon: Wind,
+    href: "/uslugi/veternici",
+    badge: "Обновлива енергија",
+    image:
+      "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&q=80",
+    accent: "#00c8ff",
+  },
+  {
+    id: 7,
+    title: "Инспекција на далеководи",
+    description:
+      "Практичен и ефикасен начин за проверка на состојбата и безбедноста на далеководите над големи дистанци и недостапни терени. Намалување на ризик за персоналот со 90%.",
+    icon: Zap,
+    href: "/uslugi/dalevodi",
+    badge: "Инфраструктура",
+    image:
+      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
+    accent: "#fbbf24",
+  },
+  {
+    id: 8,
+    title: "Пребарување и локација на терен",
+    description:
+      "Брз и ефикасен начин за скенирање големи и тешкодостапни области. Интегрирање на термална и RGB камера за пребарување лица и животни во итни ситуации.",
+    icon: Search,
+    href: "/uslugi/prebaruvanje-teren",
+    badge: "Спасување",
+    image:
+      "https://images.unsplash.com/photo-1527482797697-8795b05a13fe?w=800&q=80",
+    accent: "#00ff88",
+  },
+  {
+    id: 9,
     title: "Манифестации, Концерти, Фестивали",
     description:
-      "Впечатливи аеро видео-снимки од високи висини, создавајќи визуелни спектакли и подобрена безбедност.",
+      "Впечатливи кинематографски снимки од настани, создавајќи неверојатни визуелни спектакли. Покривање на масовни настани со безбедносен мониторинг во реално време.",
     icon: Music,
     href: "/uslugi/manifestacii",
     badge: "Настани",
-    features: ["Кинематографски shots", "Live streaming", "Брза испорака"],
+    image:
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
+    accent: "#c084fc",
+  },
+  {
+    id: 10,
+    title: "Изградба на високи објекти",
+    description:
+      "Аерофотографии и видео материјали за инспекција и управување со градежните проекти на висини. Документирање на тешкодостапни елементи на фасади, покриви и конструктивни јазли.",
+    icon: Building2,
+    href: "/uslugi/gradezni-objekti",
+    badge: "Градежништво",
+    image:
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
+    accent: "#00c8ff",
   },
 ];
 
@@ -100,34 +157,34 @@ export default function UslugiPage() {
             backgroundImage: `url("/uslugi-hero.jpg")`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/60 via-blue-900/40 to-blue-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/80 via-blue-900/70 to-blue-950/80" />
 
         <div className="container relative z-10 py-20">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Badge variant="outline" className="mb-4">
+            <Badge variant="outline" className="mb-4 border-white/30 text-white">
               Наши Услуги
             </Badge>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
               Професионални дрон услуги
             </h1>
 
-            <p className="text-xl text-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-white/80 max-w-2xl mx-auto">
               Нудиме широк спектар на услуги со најсовремена DJI Mavic 3 Pro
               опрема, сертифицирани според европските стандарди.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center pt-6">
-              <div className="flex items-center gap-2 text-sm">
-                <CheckCircle2 className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-2 text-sm text-white/90">
+                <CheckCircle2 className="w-5 h-5 text-[#00c8ff]" />
                 <span>ЕУ Сертифицирани</span>
               </div>
-              <div className="flex items-center gap-2 text-sm">
-                <CheckCircle2 className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-2 text-sm text-white/90">
+                <CheckCircle2 className="w-5 h-5 text-[#00c8ff]" />
                 <span>5.1K Hasselblad камера</span>
               </div>
-              <div className="flex items-center gap-2 text-sm">
-                <CheckCircle2 className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-2 text-sm text-white/90">
+                <CheckCircle2 className="w-5 h-5 text-[#00c8ff]" />
                 <span>Професионална обука</span>
               </div>
             </div>
@@ -136,53 +193,89 @@ export default function UslugiPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24">
+      <section
+        className="py-24"
+        style={{ background: "linear-gradient(to bottom, #050505, #0a0a0a)" }}
+      >
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="text-center space-y-4 mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#00c8ff]/30 mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#00c8ff]" />
+              <span className="text-[#00c8ff] text-sm font-medium tracking-widest uppercase">
+                Сите Услуги
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">
+              Комплетна понуда
+            </h2>
+            <p className="text-lg text-white/50 max-w-2xl mx-auto">
+              Од инспекција до снимање настани - сè што ви треба на едно место
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => {
               const Icon = service.icon;
               return (
-                <Card
+                <div
                   key={service.id}
-                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+                  className="group glass-card rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_20px_60px_rgba(0,200,255,0.15)]"
                 >
-                  <CardHeader>
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-7 h-7 text-primary" />
+                  {/* Service Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-black/40 to-transparent" />
+
+                    {/* Badge */}
+                    <div
+                      className="absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-medium"
+                      style={{
+                        background: `${service.accent}20`,
+                        border: `1px solid ${service.accent}40`,
+                        color: service.accent,
+                      }}
+                    >
+                      {service.badge}
                     </div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge variant="secondary">#{service.id}</Badge>
-                      <Badge variant="outline" className="text-xs">
-                        {service.badge}
-                      </Badge>
+
+                    {/* Icon */}
+                    <div
+                      className="absolute bottom-3 left-3 w-10 h-10 rounded-lg flex items-center justify-center"
+                      style={{
+                        background: `${service.accent}20`,
+                        border: `1px solid ${service.accent}40`,
+                      }}
+                    >
+                      <Icon
+                        className="w-5 h-5"
+                        style={{ color: service.accent }}
+                      />
                     </div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#00c8ff] transition-colors">
                       {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-base mt-2">
+                    </h3>
+                    <p className="text-sm text-white/50 leading-relaxed mb-4 line-clamp-3">
                       {service.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="flex-1 flex flex-col justify-between">
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature) => (
-                        <li
-                          key={feature}
-                          className="flex items-center gap-2 text-sm text-muted-foreground"
-                        >
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link href={service.href} className="mt-auto">
-                      <Button variant="ghost" className="w-full group/btn">
-                        Детали
+                    </p>
+                    <Link href={service.href}>
+                      <Button
+                        variant="ghost"
+                        className="p-0 h-auto text-[#00c8ff] hover:text-[#00c8ff]/80 font-medium text-sm group/btn"
+                      >
+                        Дознај повеќе
                         <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>
                     </Link>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               );
             })}
           </div>
@@ -190,54 +283,54 @@ export default function UslugiPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-muted/50">
+      <section className="py-24" style={{ background: '#0a0a0a' }}>
         <div className="container">
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">
               Зошто да нè изберете?
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-white/50">
               Професионалноста, сертификатите и искуството се наша предност
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
+            <div className="glass-card rounded-xl p-6 text-center space-y-3">
+              <div className="w-16 h-16 rounded-2xl bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center mx-auto">
                 <span className="text-3xl">🇪🇺</span>
               </div>
-              <h3 className="font-semibold">ЕУ Сертификати</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="font-semibold text-white">ЕУ Сертификати</h3>
+              <p className="text-sm text-white/40">
                 А1, А2, А3 категории според регулативи 945/947
               </p>
             </div>
 
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
+            <div className="glass-card rounded-xl p-6 text-center space-y-3">
+              <div className="w-16 h-16 rounded-2xl bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center mx-auto">
                 <span className="text-3xl">📷</span>
               </div>
-              <h3 className="font-semibold">Врвна опрема</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="font-semibold text-white">Врвна опрема</h3>
+              <p className="text-sm text-white/40">
                 DJI Mavic 3 Pro со 5.1K Hasselblad камера
               </p>
             </div>
 
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
+            <div className="glass-card rounded-xl p-6 text-center space-y-3">
+              <div className="w-16 h-16 rounded-2xl bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center mx-auto">
                 <span className="text-3xl">⚡</span>
               </div>
-              <h3 className="font-semibold">Брза реакција</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="font-semibold text-white">Брза реакција</h3>
+              <p className="text-sm text-white/40">
                 Достапни за итни инспекции 24/7
               </p>
             </div>
 
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
+            <div className="glass-card rounded-xl p-6 text-center space-y-3">
+              <div className="w-16 h-16 rounded-2xl bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center mx-auto">
                 <span className="text-3xl">✅</span>
               </div>
-              <h3 className="font-semibold">Осигурување</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="font-semibold text-white">Осигурување</h3>
+              <p className="text-sm text-white/40">
                 Целосна одговорност и liability покриеност
               </p>
             </div>
@@ -246,25 +339,25 @@ export default function UslugiPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-24" style={{ background: '#050505' }}>
         <div className="container">
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-12 text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+          <div className="max-w-4xl mx-auto glass-card rounded-2xl p-12 text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">
               Заинтересирани за наши услуги?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-white/50 max-w-2xl mx-auto">
               Контактирајте нè за бесплатна консултација и понуда прилагодена на
               вашите потреби.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link href="/kontakt">
-                <Button size="lg" className="group">
+                <Button size="lg" className="group bg-[#00c8ff] hover:bg-[#00a8dd] text-black font-bold">
                   Побарајте понуда
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link href="tel:+38970265226">
-                <Button size="lg" variant="outline">
+                <Button size="lg" variant="outline" className="border-[#00c8ff]/30 text-[#00c8ff] hover:bg-[#00c8ff]/10">
                   Јавете се: +389 70 265 226
                 </Button>
               </Link>
