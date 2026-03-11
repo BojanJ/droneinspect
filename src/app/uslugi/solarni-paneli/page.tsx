@@ -68,57 +68,63 @@ export default function SolarniPaneliPage() {
         description="Можете да го изнајмите нашиот дрон за ефикасна контрола и инспекција на вашите соларни панели со термовизиска технологија."
         icon={Sun}
         badge="Обновлива енергија"
-        number={1}
+        number={5}
+        imageUrl="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80"
       />
 
-      <section className="py-24">
+      <section className="py-24" style={{ background: '#050505' }}>
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">
                 Зошто е важна инспекцијата на соларни панели?
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/50">
                 Соларните панели се изложени на различни временски услови кои можат да предизвикаат оштетувања и намалување на ефикасноста. Редовната инспекција е клучна за:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
-                  <span className="text-muted-foreground">
+                  <span className="text-white/50 text-sm">
                     Откривање на дефектни панели кои не произведуваат енергија
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
-                  <span className="text-muted-foreground">
+                  <span className="text-white/50 text-sm">
                     Детектирање на hotspots (прегревање) кои можат да предизвикаат пожар
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
-                  <span className="text-muted-foreground">
+                  <span className="text-white/50 text-sm">
                     Идентификација на проблеми со поврзаноста и електричните компоненти
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
-                  <span className="text-muted-foreground">
+                  <span className="text-white/50 text-sm">
                     Максимизирање на ROI (повраток на инвестицијата) на соларниот систем
                   </span>
                 </li>
               </ul>
             </div>
 
-            <div className="relative aspect-square bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900 dark:to-background rounded-2xl flex items-center justify-center">
-              <Sun className="w-32 h-32 text-primary" />
+            <div className="relative aspect-video rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80"
+                alt="Соларни панели инспекција"
+                className="w-full h-full object-cover opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
             </div>
           </div>
         </div>
@@ -126,24 +132,24 @@ export default function SolarniPaneliPage() {
 
       <ServiceFeatures features={features} />
 
-      <section className="py-24 bg-muted/50">
+      <section className="py-24" style={{ background: '#0a0a0a' }}>
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white mb-12">
               Што добивате?
             </h2>
-            <div className="grid md:grid-cols-3 gap-6 mt-12">
-              <div className="space-y-2">
-                <div className="text-4xl font-bold text-primary">95%+</div>
-                <div className="text-sm text-muted-foreground">Точност на детекција</div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="glass-card rounded-xl p-8">
+                <div className="text-4xl font-black text-[#00c8ff] mb-2">95%+</div>
+                <div className="text-sm text-white/40">Точност на детекција</div>
               </div>
-              <div className="space-y-2">
-                <div className="text-4xl font-bold text-primary">10x</div>
-                <div className="text-sm text-muted-foreground">Побрзо од традиционални методи</div>
+              <div className="glass-card rounded-xl p-8">
+                <div className="text-4xl font-black text-[#00c8ff] mb-2">10x</div>
+                <div className="text-sm text-white/40">Побрзо од традиционални методи</div>
               </div>
-              <div className="space-y-2">
-                <div className="text-4xl font-bold text-primary">24-48h</div>
-                <div className="text-sm text-muted-foreground">Време за извештај</div>
+              <div className="glass-card rounded-xl p-8">
+                <div className="text-4xl font-black text-[#00c8ff] mb-2">24-48h</div>
+                <div className="text-sm text-white/40">Време за извештај</div>
               </div>
             </div>
           </div>

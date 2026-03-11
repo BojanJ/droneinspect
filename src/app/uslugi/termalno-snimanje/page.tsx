@@ -69,7 +69,7 @@ export default function TermalnoSnimanePage() {
         icon={Thermometer}
         badge="Термовизија"
         number={2}
-        imageUrl="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&q=80"
+        imageUrl="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1920&q=80"
       />
 
       <section className="py-24" style={{ background: '#050505' }}>

@@ -68,7 +68,8 @@ export default function VeterniciPage() {
         description="Остварете точни инспекции на ветерници и други објекти за обновлива енергија, за подобро управување со вашите ресурси. Брзо и ефикасно набљудување на нивната состојба."
         icon={Wind}
         badge="Обновлива енергија"
-        number={2}
+        number={6}
+        imageUrl="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=1920&q=80"
       />
 
       <section className="py-24">

@@ -68,60 +68,61 @@ export default function PrebaruvanjeTerenPage() {
         description="Употребата на дронови има неоспорни предности при пребарување и локација на терен, затоа што овие беспилотни летачки апарати овозможуваат брз и ефикасен начин за скенирање големи и тешкодостапни области. Дроновите се опремени со камери и сензори кои овозможуваат детално снимање и анализа на теренот."
         icon={Search}
         badge="Спасување"
-        number={5}
+        number={8}
+        imageUrl="https://images.unsplash.com/photo-1527482797697-8795b05a13fe?w=1920&q=80"
       />
 
-      <section className="py-24">
+      <section className="py-24" style={{ background: '#050505' }}>
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">
                 Критичноста на времето
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/50">
                 При пребарување и спасување, секоја минута е важна. Дроновите драстично го намалуваат времето потребно за:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Лоцирање на исчезнати лица</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Лоцирање на исчезнати лица</p>
+                    <p className="text-sm text-white/50">
                       Планинари, печалбари, деца или лица со Алцхајмер
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Природни катастрофи</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Природни катастрофи</p>
+                    <p className="text-sm text-white/50">
                       Поплави, земјотреси - пребарување под урнатини
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Шумски пожари</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Шумски пожари</p>
+                    <p className="text-sm text-white/50">
                       Детекција на огништа и термални точки
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Картографија на терен</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Картографија на терен</p>
+                    <p className="text-sm text-white/50">
                       Детални мапи на непознати или тешки терени
                     </p>
                   </div>
@@ -129,8 +130,13 @@ export default function PrebaruvanjeTerenPage() {
               </ul>
             </div>
 
-            <div className="relative aspect-square bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900 dark:to-background rounded-2xl flex items-center justify-center">
-              <Search className="w-32 h-32 text-primary" />
+            <div className="relative aspect-video rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1527482797697-8795b05a13fe?w=800&q=80"
+                alt="Пребарување терен"
+                className="w-full h-full object-cover opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
             </div>
           </div>
         </div>

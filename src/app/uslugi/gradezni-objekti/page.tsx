@@ -68,60 +68,61 @@ export default function GradezniObjektiPage() {
         description="Користењето на дронови е извонредно корисна опција при изградбата на високи објекти. Нашиот дрон може да обезбеди важни аерофотографии и видео материјали, што го олеснува процесот на инспекција и управување со градежните проекти."
         icon={Building2}
         badge="Градежништво"
-        number={3}
+        number={10}
+        imageUrl="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80"
       />
 
-      <section className="py-24">
+      <section className="py-24" style={{ background: '#050505' }}>
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">
                 Предности за градежна индустрија
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/50">
                 Дроновите се незаменлива алатка во модерното градежништво. Тие овозможуваат:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Подобра комуникација</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Подобра комуникација</p>
+                    <p className="text-sm text-white/50">
                       Јасна визуелна комуникација помеѓу инвеститори, архитекти и градежници
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Временска ефикасност</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Временска ефикасност</p>
+                    <p className="text-sm text-white/50">
                       Брзо снимање на целото градилиште наместо часови на пешачко разгледување
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Намалени трошоци</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Намалени трошоци</p>
+                    <p className="text-sm text-white/50">
                       Елиминирање на потребата од скапи кранови или scaffolding за инспекција
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Документација за осигурување</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Документација за осигурување</p>
+                    <p className="text-sm text-white/50">
                       Комплетна визуелна документација за осигурителни и правни цели
                     </p>
                   </div>
@@ -129,8 +130,13 @@ export default function GradezniObjektiPage() {
               </ul>
             </div>
 
-            <div className="relative aspect-square bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900 dark:to-background rounded-2xl flex items-center justify-center">
-              <Building2 className="w-32 h-32 text-primary" />
+            <div className="relative aspect-video rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80"
+                alt="Градежни објекти"
+                className="w-full h-full object-cover opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
             </div>
           </div>
         </div>

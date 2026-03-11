@@ -68,64 +68,70 @@ export default function ManifestaciiPage() {
         description="Користењето на дронови на големи настани како концерти и фестивали може да има голема улога за забавата и безбедноста. Овие безпилотни летачки апарати овозможуваат впечатливи видео-снимки од високи висини, создавајќи визуелни спектакли за посетителите."
         icon={Music}
         badge="Настани"
-        number={6}
+        number={9}
+        imageUrl="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&q=80"
       />
 
-      <section className="py-24">
+      <section className="py-24" style={{ background: '#050505' }}>
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 relative aspect-square bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900 dark:to-background rounded-2xl flex items-center justify-center">
-              <Music className="w-32 h-32 text-primary" />
+            <div className="order-2 lg:order-1 relative aspect-video rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80"
+                alt="Манифестации и настани"
+                className="w-full h-full object-cover opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
             </div>
 
             <div className="order-1 lg:order-2 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">
                 Зошто аерофото за настани?
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/50">
                 Аероснимките на настани ја сменија играта во индустријата за настани. Овозможуваат:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Впечатлива документација</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Впечатлива документација</p>
+                    <p className="text-sm text-white/50">
                       Целосно покривање на настанот од различни аголи
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Масовна публика</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Масовна публика</p>
+                    <p className="text-sm text-white/50">
                       Прикажување на големината и енергијата на настанот
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Художнички shots</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Художнички shots</p>
+                    <p className="text-sm text-white/50">
                       Кинематографски движења и композиции
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Социјални медиуми</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Социјални медиуми</p>
+                    <p className="text-sm text-white/50">
                       Вирален потенцијал на аероснимки
                     </p>
                   </div>

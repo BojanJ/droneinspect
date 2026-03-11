@@ -68,64 +68,70 @@ export default function DalevodiPage() {
         description="Изнајмување на дронови за инспекција на далеководите е практичен и ефикасен начин за проверка на нивната состојба и безбедност. Нашиот дрон може да пролета над големи дистанци и недостапни терени, обезбедувајќи детални слики и информации за брза и точна реакција на потенцијални проблеми."
         icon={Zap}
         badge="Инфраструктура"
-        number={4}
+        number={7}
+        imageUrl="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80"
       />
 
-      <section className="py-24">
+      <section className="py-24" style={{ background: '#050505' }}>
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 relative aspect-square bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900 dark:to-background rounded-2xl flex items-center justify-center">
-              <Zap className="w-32 h-32 text-primary" />
+            <div className="order-2 lg:order-1 relative aspect-video rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80"
+                alt="Далеководи инспекција"
+                className="w-full h-full object-cover opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
             </div>
 
             <div className="order-1 lg:order-2 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">
                 Критичноста на далеководи
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/50">
                 Електричната мрежа е животна артерија на модерното општество. Редовната инспекција е клучна за:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Спречување на прекини</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Спречување на прекини</p>
+                    <p className="text-sm text-white/50">
                       Откривање на проблеми пред да предизвикаат пад на системот
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Безбедност на населението</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Безбедност на населението</p>
+                    <p className="text-sm text-white/50">
                       Идентификација на ризици од електрични удари или пожари
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Оптимизација на одржување</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Оптимизација на одржување</p>
+                    <p className="text-sm text-white/50">
                       Планирање на интервенции врз база на реални податоци
                     </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-6 h-6 rounded-full bg-[#00c8ff]/10 border border-[#00c8ff]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[#00c8ff] text-xs font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="font-medium">Намалени трошоци</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">Намалени трошоци</p>
+                    <p className="text-sm text-white/50">
                       Елиминирање на скапи хеликоптерски инспекции
                     </p>
                   </div>
