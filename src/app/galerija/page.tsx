@@ -370,7 +370,7 @@ export default function GalerijaPage() {
                         alt={item.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
-                      
+
                       {item.type === "video" && (
                         <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           <div className="bg-white/90 backdrop-blur-sm rounded-full p-4">
@@ -378,10 +378,10 @@ export default function GalerijaPage() {
                           </div>
                         </div>
                       )}
-                      
+
                       {/* Gradient Fade to Content */}
                       <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/50 to-transparent pointer-events-none" />
-                      
+
                       <Badge className="absolute top-3 right-3 shadow-lg">
                         {item.type === "photo" ? (
                           <>
@@ -398,7 +398,7 @@ export default function GalerijaPage() {
                     </div>
 
                     {/* Content */}
-                    <div className="p-5">
+                    <div className="p-5 pt-0">
                       <h3 className="font-bold text-lg mb-2 line-clamp-1 group-hover:text-primary transition-colors">
                         {item.title}
                       </h3>
@@ -410,7 +410,7 @@ export default function GalerijaPage() {
                       <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4 pb-4 border-b">
                         <div className="flex items-center gap-1.5">
                           <Calendar className="w-3.5 h-3.5" />
-                          {item.date.split('-').reverse().join('/')}
+                          {item.date.split("-").reverse().join("/")}
                         </div>
                         <div className="flex items-center gap-1.5">
                           <Maximize2 className="w-3.5 h-3.5" />
