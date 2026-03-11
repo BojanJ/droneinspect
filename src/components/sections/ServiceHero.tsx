@@ -60,7 +60,7 @@ export function ServiceHero({ title, description, icon: Icon, badge, number, ima
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-            <Link href="/kontakt">
+            <Link href="#contact">
               <Button size="lg" className="group bg-[#00c8ff] hover:bg-[#00a8dd] text-black font-bold px-8 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,200,255,0.4)]">
                 Закажи термин
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

@@ -22,7 +22,7 @@ export function ContactForm() {
   };
 
   return (
-    <section className="py-24" style={{ background: 'linear-gradient(to bottom, #0a0a0a, #050505)' }}>
+    <section id="contact" className="py-24" style={{ background: 'linear-gradient(to bottom, #0a0a0a, #050505)' }}>
       <div className="container">
         {/* Section header */}
         <div className="text-center mb-16">
