@@ -10,8 +10,12 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div>
-              <h3 className="text-2xl font-black text-[#00c8ff]" style={{ textShadow: '0 0 20px rgba(0,200,255,0.3)' }}>DroneInspect</h3>
-              <p className="text-sm font-bold text-white/40">МК</p>
+              <img 
+                src="/logo/DroneInspect Logo White.svg" 
+                alt="DroneInspect MK" 
+                className="h-12 w-auto mb-2"
+                style={{ filter: 'drop-shadow(0 0 20px rgba(0,200,255,0.3))' }}
+              />
             </div>
             <p className="text-sm text-white/40 leading-relaxed">
               Професионални дрон услуги и обука во Македонија. Европски сертифицирани според регулативи 945/947.

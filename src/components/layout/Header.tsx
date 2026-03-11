@@ -30,9 +30,13 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-white/10" style={{ background: 'rgba(5, 5, 5, 0.8)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }}>
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-black text-[#00c8ff]" style={{ textShadow: '0 0 20px rgba(0,200,255,0.4)' }}>DroneInspect</span>
-          <span className="text-sm font-bold text-white/50">МК</span>
+        <Link href="/" className="flex items-center">
+          <img 
+            src="/logo/DroneInspect Logo White.svg" 
+            alt="DroneInspect MK" 
+            className="h-12 w-auto"
+            style={{ filter: 'drop-shadow(0 0 20px rgba(0,200,255,0.3))' }}
+          />
         </Link>
 
         {/* Desktop Navigation */}
