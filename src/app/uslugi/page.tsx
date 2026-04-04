@@ -170,7 +170,7 @@ export default function UslugiPage() {
             </h1>
 
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Нудиме широк спектар на услуги со најсовремена DJI Mavic 3 Pro
+              Нудиме широк спектар на услуги со најсовремена DJI Mavic 4 Pro
               опрема, сертифицирани според европските стандарди.
             </p>
 
@@ -311,7 +311,7 @@ export default function UslugiPage() {
               </div>
               <h3 className="font-semibold text-white">Врвна опрема</h3>
               <p className="text-sm text-white/40">
-                DJI Mavic 3 Pro со 5.1K Hasselblad камера
+                DJI Mavic 4 Pro со 5.1K Hasselblad камера
               </p>
             </div>
 

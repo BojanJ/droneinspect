@@ -5,8 +5,8 @@ import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "DroneInspectMK - Професионални Дрон Услуги",
-  description: "Професионални дрон услуги и обука во Македонија. Европски сертифицирани според регулативи 945/947. DJI Mavic 3 Pro.",
-  keywords: ["дрон", "инспекција", "македонија", "обука", "DJI Mavic 3 Pro", "аерофотографија"],
+  description: "Професионални дрон услуги и обука во Македонија. Европски сертифицирани според регулативи 945/947. DJI Mavic 4 Pro.",
+  keywords: ["дрон", "инспекција", "македонија", "обука", "DJI Mavic 4 Pro", "аерофотографија"],
 };
 
 export default function RootLayout({

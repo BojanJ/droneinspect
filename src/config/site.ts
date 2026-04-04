@@ -55,7 +55,7 @@ export const siteConfig = {
   certifications: [
     "Европски сертификати А1, А2, А3",
     "Согласност со регулативи 945/947",
-    "DJI Mavic 3 Pro сертифициран",
+    "DJI Mavic 4 Pro сертифициран",
   ],
 };
 
