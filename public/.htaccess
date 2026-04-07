@@ -2,6 +2,10 @@
   RewriteEngine On
   RewriteBase /
 
+  # Redirect www to non-www
+  RewriteCond %{HTTP_HOST} ^www\.droneinspect\.mk$ [NC]
+  RewriteRule ^(.*)$ https://droneinspect.mk/$1 [R=301,L]
+
   # Preserve assets and API calls
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
