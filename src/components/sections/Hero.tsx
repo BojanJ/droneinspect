@@ -83,13 +83,13 @@ export function Hero() {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 max-w-xl mx-auto pt-8 border-t border-white/10">
             <div className="text-center">
-              <div className="text-3xl font-black text-[#00c8ff]">5.1K</div>
+              <div className="text-3xl font-black text-[#00c8ff]">DJI</div>
               <div className="text-xs text-white/50 mt-1 uppercase tracking-wider">
-                Hasselblad
+                Продажба
               </div>
             </div>
             <div className="text-center border-x border-white/10">
-              <div className="text-3xl font-black text-[#00c8ff]">A1-A3</div>
+              <div className="text-3xl font-black text-[#00c8ff]">A1-A2-A3</div>
               <div className="text-xs text-white/50 mt-1 uppercase tracking-wider">
                 ЕУ Лиценци
               </div>
