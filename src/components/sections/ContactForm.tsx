@@ -14,7 +14,8 @@ export function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -25,7 +26,7 @@ export function ContactForm() {
       const data = await response.json();
 
       if (data.success) {
-        e.currentTarget.reset();
+        form.reset();
         alert('Вашата порака е успешно испратена! Ќе ве контактираме наскоро.');
       } else {
         alert('Настана грешка. Ве молиме обидете се повторно.');
