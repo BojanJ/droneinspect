@@ -181,7 +181,7 @@ export default function UslugiPage() {
               </div>
               <div className="flex items-center gap-2 text-sm text-white/90">
                 <CheckCircle2 className="w-5 h-5 text-[#00c8ff]" />
-                <span>5.1K Hasselblad камера</span>
+                <span>6K Hasselblad камера</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-white/90">
                 <CheckCircle2 className="w-5 h-5 text-[#00c8ff]" />
@@ -301,7 +301,7 @@ export default function UslugiPage() {
               </div>
               <h3 className="font-semibold text-white">ЕУ Сертификати</h3>
               <p className="text-sm text-white/40">
-                А1, А2, А3 категории според регулативи 945/947
+                А1, А2, А3 и STS категории според регулативи 945/947
               </p>
             </div>
 
@@ -311,7 +311,7 @@ export default function UslugiPage() {
               </div>
               <h3 className="font-semibold text-white">Врвна опрема</h3>
               <p className="text-sm text-white/40">
-                DJI Mavic 4 Pro со 5.1K Hasselblad камера
+                DJI Mavic 4 Pro со 6K Hasselblad камера
               </p>
             </div>
 

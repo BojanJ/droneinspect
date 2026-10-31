@@ -229,7 +229,7 @@ export default function GalerijaPage() {
             <div className="flex flex-wrap gap-4 justify-center">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Camera className="w-5 h-5" />
-                <span className="text-sm">5.1K Резолуција</span>
+                <span className="text-sm">6K Резолуција</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Video className="w-5 h-5" />
@@ -509,7 +509,7 @@ export default function GalerijaPage() {
                 <h3 className="font-bold mb-2">Висока Резолуција</h3>
                 <p className="text-sm text-muted-foreground">
                   Сите фотографии се достапни во RAW формат со 20MP резолуција.
-                  Видеата се во 4K и 5.1K квалитет.
+                  Видеата се во 4K и 6K квалитет.
                 </p>
               </Card>
 

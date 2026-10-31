@@ -158,7 +158,7 @@ export default function PrebaruvanjeTerenPage() {
               <div className="bg-background p-6 rounded-lg border-2">
                 <h3 className="font-semibold text-lg mb-3">Визуелни камери</h3>
                 <ul className="text-sm space-y-2 text-muted-foreground">
-                  <li>• 4K/5.1K резолуција за детални слики</li>
+                  <li>• 4K/6K резолуција за детални слики</li>
                   <li>• Зум до 28x за идентификација од далечина</li>
                   <li>• Стабилизација за јасни слики од воздух</li>
                   <li>• Low-light перформанси за лоши услови</li>

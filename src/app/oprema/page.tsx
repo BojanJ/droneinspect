@@ -24,13 +24,13 @@ import { ContactForm } from "@/components/sections/ContactForm";
 export const metadata: Metadata = {
   title: "DJI Mavic 4 Pro - Професионална Опрема - DroneInspectMK",
   description:
-    "DJI Mavic 4 Pro со 5.1K Hasselblad камера, многуфункционален зум, долго време на летање и напредни технологии за професионална употреба.",
+    "DJI Mavic 4 Pro со 6K Hasselblad камера, многуфункционален зум, долго време на летање и напредни технологии за професионална употреба.",
 };
 
 const keyFeatures = [
   {
     icon: Camera,
-    title: "5.1K Hasselblad Камера",
+    title: "6K Hasselblad Камера",
     description:
       'Професионална камера со 20MP CMOS сензор и 4/3" големина за извонредни фотографии и видеа',
   },
@@ -71,7 +71,7 @@ const cameraSpecs = [
     specs: [
       { label: "Сензор", value: "4/3 CMOS, 20MP" },
       { label: "Објектив", value: "24mm, f/2.8-f/11" },
-      { label: "Видео", value: "5.1K @ 50fps, 4K @ 120fps" },
+      { label: "Видео", value: "6K @ 60fps, 4K @ 120fps" },
       { label: "Фото", value: "20MP, RAW + JPEG" },
       { label: "ISO Ранг", value: "100-6400 (Видео), 100-12800 (Фото)" },
       { label: "Затворач", value: "Електронски, 8-1/8000s" },
@@ -224,7 +224,7 @@ export default function OpremaPage() {
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
                   Најнапредната професионална дрон платформа со тро-камерен
-                  систем, 5.1K Hasselblad камера и долго време на летање.
+                  систем, 6K Hasselblad камера и долго време на летање.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" asChild>
@@ -476,7 +476,7 @@ export default function OpremaPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Зошто Mavic 3 Pro?
+                Зошто Mavic 4 Pro?
               </h2>
               <p className="text-lg text-muted-foreground">
                 Споредба со конкуренцијата

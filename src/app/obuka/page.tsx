@@ -21,19 +21,19 @@ import { ContactForm } from '@/components/sections/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Професионална Обука за Дронови - DroneInspectMK',
-  description: 'Професионална обука за безбедно користење на дрон согласно европските регулативи 945/947. Добијте европски сертификат А1, А2 или А3.',
+  description: 'Професионална обука за безбедно користење на дрон согласно европските регулативи 945/947. Добијте европски сертификат А1, А2, А3 или STS.',
 };
 
 const certificates = [
   {
     name: 'А1',
     category: 'Отворена Категорија',
-    description: 'Летање над луѓе - дронови под 250г',
+    description: 'Летање со мали дронови - маса под 250г',
     requirements: [
       'Онлајн обука и тест',
       'Минимална возраст: 16 години',
       'Дронови со маса под 250г',
-      'Летање над луѓе дозволено'
+      'Визуелна видливост (VLOS)'
     ],
     maxWeight: '< 250g',
     altitude: 'до 120m',
@@ -62,6 +62,20 @@ const certificates = [
       'Минимална возраст: 16 години',
       'Дронови со маса до 25кг',
       'Минимална далечина од луѓе: 150м'
+    ],
+    maxWeight: '< 25kg',
+    altitude: 'до 120m',
+    icon: Plane,
+  },
+  {
+    name: 'STS',
+    category: 'Специфична Категорија',
+    description: 'Стандардни сценарија за напредни операции',
+    requirements: [
+      'Теоретска и практична обука + испит',
+      'Минимална возраст: 16 години',
+      'Дронови со маса до 25кг',
+      'Стандардни сценарија (STS-01 / STS-02)'
     ],
     maxWeight: '< 25kg',
     altitude: 'до 120m',
@@ -117,7 +131,7 @@ const topics = [
     points: [
       'Регулатива 2019/945 (стандарди на дронови)',
       'Регулатива 2019/947 (правила за летање)',
-      'Категории на операции (А1, А2, А3)',
+      'Категории на операции (А1, А2, А3, STS)',
       'Ограничувања и забрани'
     ]
   },
@@ -163,7 +177,7 @@ const trainingProcess = [
   {
     number: 1,
     title: 'Регистрација',
-    description: 'Пријавете се за обуката и изберете ја вашата категорија (А1, А2 или А3)'
+    description: 'Пријавете се за обуката и изберете ја вашата категорија (А1, А2, А3 или STS)'
   },
   {
     number: 2,
@@ -286,14 +300,14 @@ export default function ObukaPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Европски Сертификати - Отворена Категорија
+              Европски Сертификати и Категории
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Изберете ја соодветната категорија зависно од вашиот дрон и планираната употреба
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {certificates.map((cert) => (
               <Card key={cert.name} className="p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-center justify-between mb-4">
