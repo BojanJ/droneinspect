@@ -1,0 +1,62 @@
+name: Build & deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only log what would be uploaded/deleted; don't touch the server"
+        type: boolean
+        default: false
+      debug:
+        description: "Verbose connection log"
+        type: boolean
+        default: false
+
+# Never run two uploads against the server at the same time.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # NEXT_PUBLIC_* values are baked into the static files at build time (.env.local isn't in git).
+      - name: Build static site
+        env:
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID || vars.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
+          NEXT_PUBLIC_CONTACT_EMAIL: ${{ vars.NEXT_PUBLIC_CONTACT_EMAIL || 'droneinspectmk@gmail.com' }}
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://droneinspect.mk' }}
+        run: npm run build
+
+      - name: Install lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      # Mirrors ./out to the FTP account root (= public_html) over FTP: overwrites everything, deletes anything not in the
+      # build, but never touches the paths in KEEP (scripts/deploy.sh).
+      - name: Sync ./out to server (FTP)
+        env:
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_HOST: ${{ vars.FTP_HOST || 'ftp.droneinspect.mk' }}
+          FTP_PORT: ${{ vars.FTP_PORT || '21' }}
+          FTP_USER: ${{ vars.FTP_USER || 'u149685493.bojanftp' }}
+          SERVER_DIR: ${{ vars.SERVER_DIR || './' }}
+          DRY_RUN: ${{ inputs.dry_run && '--dry-run' || '' }}
+          DEBUG: ${{ inputs.debug || false }}
+        run: bash scripts/deploy.sh
